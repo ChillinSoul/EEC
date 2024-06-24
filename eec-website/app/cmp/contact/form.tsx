@@ -8,17 +8,23 @@ export interface FormItem {
 }
 interface ContactFormProps {
   formItems: FormItem[];
+  job?: string;
 }
 
-const ContactForm: React.FC<ContactFormProps> = ({ formItems }) => {
+const ContactForm: React.FC<ContactFormProps> = ({ formItems, job }) => {
+
   const onsubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submitted");
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
+    console.log("Form submitted");
+    if (job){
+        console.log("Job: ", job);
+    }
     console.log(data);
   };
+  
   return (
     <div className="flex flex-col gap-5 m-auto">
       <form onSubmit={onsubmit}>
