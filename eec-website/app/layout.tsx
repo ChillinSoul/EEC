@@ -14,6 +14,7 @@ const navItems: NavItem[] = [
   { text: "About", link: "/about" },
   { text: "Projects", link: "/projects" },
   { text: "Contact", link: "/contact" },
+  { text: "Test", link: "/testpage" },
 ];
 
 export default function RootLayout({
