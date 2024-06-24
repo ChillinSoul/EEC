@@ -1,6 +1,11 @@
+nav{
+  z-index: 1000;
+}
+
 .border-line{
     isolation: isolate;
     position: relative;
+    z-index: 1000;
   }
   .border-line::before {
     content: "";
