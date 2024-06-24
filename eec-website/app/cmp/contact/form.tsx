@@ -1,6 +1,6 @@
 "use client";
 import FormLine from './formLine'
-
+import "./styles.css";
 export interface FormItem{
     label: string;
     type: string;

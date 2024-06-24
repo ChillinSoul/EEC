@@ -5,12 +5,13 @@ const FormLine: React.FC<{ item: FormItem }> = ({ item }) => {
         <div className="form-line">
             <label>
                 {item.label}
-                <input
+                
+            </label>
+            <input
                     type={item.type}
                     placeholder={item.placeholder}
                     name={item.label.toLowerCase().replace(/\s+/g, '_')}
                 />
-            </label>
         </div>
     );
 };

@@ -1,0 +1,19 @@
+.form-line {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-line > * {
+    margin: 0.5em 0;
+}
+
+.form-line > label {
+    font-weight: bold;
+}
+
+.form-line > input {
+    padding: 0.5em;
+    border: 1px solid var(--color);
+    background-color: transparent;
+    border-radius: 0.25em;
+}
