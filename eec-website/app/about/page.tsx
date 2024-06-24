@@ -46,38 +46,44 @@ const About: React.FC = () => {
           className="w-full h-auto mb-4 rounded"
         />
         <p className="text-lg leading-relaxed text-gray-700 mb-4">
-          We offer a range of services and activities aimed at enhancing the
-          educational experience of our members, including:
+          We specialize in projects across various fields including IT,
+          Electronics, Electro-mechanics, Automation, and more. Our team of
+          skilled students works diligently to bring innovative solutions to
+          complex problems.
         </p>
-        <ul className="mb-4 list-disc list-inside text-lg leading-relaxed text-gray-700">
-          <li>Collaborative projects with industry partners</li>
-          <li>
-            Workshops and seminars on the latest engineering trends and
-            technologies
-          </li>
-          <li>
-            Mentorship programs connecting students with experienced
-            professionals
-          </li>
-          <li>Networking events and career fairs</li>
-        </ul>
       </section>
 
       <section className="w-full max-w-4xl p-8 bg-white rounded shadow-md mb-8">
         <h2 className="mb-4 text-3xl font-semibold text-gray-800">
-          Our Impact
+          How We Work
         </h2>
         <img
-          src="/impact.jpg"
-          alt="Our Impact"
+          src="/how-we-work.jpg"
+          alt="How We Work"
           className="w-full h-auto mb-4 rounded"
         />
-        <p className="text-lg leading-relaxed text-gray-700">
-          Since our inception, EEC has successfully connected numerous students
-          with industry professionals, facilitated impactful projects, and
-          provided invaluable learning experiences. Our members have gone on to
-          secure internships, jobs, and further their education, equipped with
-          the skills and confidence gained through their involvement with EEC.
+        <p className="text-lg leading-relaxed text-gray-700 mb-4">
+          We have a group of dedicated student members who are part of EEC. When
+          there are no active projects, these students are "On the bench,"
+          participating in various activities such as team buildings, workshops,
+          and internal projects. When a client contacts us with a project, we
+          assess the requirements, form a team, and decide whether to accept the
+          project.
+        </p>
+      </section>
+
+      <section className="w-full max-w-4xl p-8 bg-white rounded shadow-md mb-8">
+        <h2 className="mb-4 text-3xl font-semibold text-gray-800">Workshops</h2>
+        <img
+          src="/workshops.jpg"
+          alt="Workshops"
+          className="w-full h-auto mb-4 rounded"
+        />
+        <p className="text-lg leading-relaxed text-gray-700 mb-4">
+          Throughout the year, we organize workshops on various subjects such as
+          communication skills, management, and more. These workshops aim to
+          equip our members with essential soft skills and knowledge to excel in
+          their professional careers.
         </p>
       </section>
 
@@ -101,6 +107,31 @@ const About: React.FC = () => {
             contact us
           </a>
           .
+        </p>
+      </section>
+
+      <section className="w-full max-w-4xl p-8 bg-white rounded shadow-md mb-8">
+        <h2 className="mb-4 text-3xl font-semibold text-gray-800">
+          Work with Us
+        </h2>
+        <img
+          src="/work-with-us.jpg"
+          alt="Work with Us"
+          className="w-full h-auto mb-4 rounded"
+        />
+        <p className="text-lg leading-relaxed text-gray-700 mb-4">
+          If you are a company seeking innovative solutions or looking to
+          collaborate on engineering projects, we would love to work with you.
+          Our team of talented students is ready to tackle challenging projects
+          and deliver high-quality results.
+        </p>
+        <p className="text-lg leading-relaxed text-gray-700">
+          Get in touch with us to discuss potential collaborations and how we
+          can assist with your engineering needs.{" "}
+          <a href="/contact" className="text-blue-500 hover:underline">
+            Contact us
+          </a>{" "}
+          today.
         </p>
       </section>
     </main>

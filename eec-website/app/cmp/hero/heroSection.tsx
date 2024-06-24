@@ -13,9 +13,7 @@ const HeroSection: React.FC = () => {
             The bridge between academic and professional life
           </p>
           <Link href="/about">
-            <button className="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700">
-              Learn More
-            </button>
+            <button className="button">Learn More</button>
           </Link>
         </div>
       </div>
