@@ -14,7 +14,6 @@ const navItems: NavItem[] = [
   { text: "Home", link: "/" },
   { text: "About", link: "/about" },
   { text: "Projects", link: "/projects" },
-  { text: "Contact", link: "/contact" },
   { text: "Join", link: "/join" },
   { text: "Test", link: "/testpage" },
 ];

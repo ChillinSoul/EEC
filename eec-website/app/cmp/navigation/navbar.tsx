@@ -20,7 +20,7 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
             <Navlink key={index} text={item.text} link={item.link} />
           ))}
         </ul>
-        <a className="button" href="#">
+        <a className="button" href="/contact">
           Contact
         </a>
       </div>

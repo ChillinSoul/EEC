@@ -19,7 +19,7 @@ const JobCard: React.FC<JobCardProps> = ({ job }) => {
       <div className="job-card-text">
         
         <p>{job.description}</p>
-        <a className="button">Apply</a>
+        <a className="button" href = {`/contact/${job.title}`}>Apply</a>
       </div>
     </div>
   );
