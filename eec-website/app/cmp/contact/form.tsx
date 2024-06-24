@@ -14,11 +14,12 @@ interface ContactFormProps {
 const ContactForm: React.FC<ContactFormProps> = ({ formItems }) => {
     const onsubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        console.log('Form submitted'); 
         const form = e.target as HTMLFormElement;
         const formData = new FormData(form);
-        const data = Object.fromEntries(formData);
+        const data = Object.fromEntries(formData.entries());
         console.log(data);
-    }
+    };
     return (
         <div className="flex flex-col gap-5 m-auto">
             <form onSubmit={onsubmit}>

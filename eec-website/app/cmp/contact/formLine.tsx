@@ -1,11 +1,18 @@
 import {FormItem} from './form'
 
-const FormLine = ({item}: {item: FormItem}) => {
+const FormLine: React.FC<{ item: FormItem }> = ({ item }) => {
     return (
-        <div className="flex flex-col gap-1">
-            <label>{item.label}</label>
-            <input type={item.type} placeholder={item.placeholder} />
+        <div className="form-line">
+            <label>
+                {item.label}
+                <input
+                    type={item.type}
+                    placeholder={item.placeholder}
+                    name={item.label.toLowerCase().replace(/\s+/g, '_')}
+                />
+            </label>
         </div>
     );
-}
+};
+
 export default FormLine;
