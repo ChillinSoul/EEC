@@ -1,5 +1,5 @@
 import ContactForm from "../cmp/contact/form";
-export default function test() {
+export default function Contact() {
   const formItems = [
     { label: "Name", type: "text", placeholder: "John Doe" },
     { label: "Email", type: "email", placeholder: "email@mail.com" },
@@ -7,7 +7,7 @@ export default function test() {
   ];
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <ContactForm formItems={formItems} />
+      <ContactForm formItems={formItems} title="Contact Form"/>
     </main>
   );
 }

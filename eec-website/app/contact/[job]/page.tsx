@@ -2,7 +2,7 @@
 import { useParams } from "next/navigation";
 import ContactForm from "../../cmp/contact/form";
 
-export default function Test() {
+export default function Contact() {
   const { job } = useParams(); 
   const decodedJob = decodeURIComponent(Array.isArray(job) ? job[0] : job); 
 
@@ -14,8 +14,7 @@ export default function Test() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1 className="text-2xl font-bold mb-4">Job: {decodedJob}</h1>
-      <ContactForm formItems={formItems} job={decodedJob} />
+      <ContactForm formItems={formItems} job={decodedJob} title={`Job: ${decodedJob}`} />
     </main>
   );
 }

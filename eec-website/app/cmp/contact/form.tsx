@@ -9,9 +9,10 @@ export interface FormItem {
 interface ContactFormProps {
   formItems: FormItem[];
   job?: string;
+  title: string;
 }
 
-const ContactForm: React.FC<ContactFormProps> = ({ formItems, job }) => {
+const ContactForm: React.FC<ContactFormProps> = ({ formItems, title, job }) => {
 
   const onsubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -24,9 +25,10 @@ const ContactForm: React.FC<ContactFormProps> = ({ formItems, job }) => {
     }
     console.log(data);
   };
-  
+
   return (
     <div className="flex flex-col gap-5 m-auto">
+    <h2 className="text-2xl text-[var(--color)]">{title}</h2>
       <form onSubmit={onsubmit}>
         {formItems.map((item, index) => (
           <FormLine key={index} item={item} />
