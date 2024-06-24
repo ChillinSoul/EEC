@@ -2,7 +2,6 @@ import "./styles.css";
 export interface Job {
   title: string;
   description: string;
-  image: string;
   icon: string;
 }
 
@@ -15,13 +14,13 @@ const JobCard: React.FC<JobCardProps> = ({ job }) => {
     <div className="job-card">
       <div className="job-card-icon">
         <img src={job.icon} alt="job icon" />
+        <h2 className="text-xl">{job.title}</h2>
       </div>
       <div className="job-card-text">
-        <h2>{job.title}</h2>
+        
         <p>{job.description}</p>
-        <a className="button-alt">Apply</a>
+        <a className="button">Apply</a>
       </div>
-      <img className="job-card-image" src={job.image} alt="job image" />
     </div>
   );
 };

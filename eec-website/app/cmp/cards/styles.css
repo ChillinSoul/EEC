@@ -1,74 +1,37 @@
 .job-card {
   width: 30em;
-  height: 20em;
+ 
   border-radius: 1em;
-  color: white;
   display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
   isolation: isolate;
-}
-
-.job-card > job-card-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  background-color: white;
 }
 
 .job-card-icon {
   position: absolute;
+  display: flex;
+  align-items: center;
+  color:white;
   top: 0;
   width: 100%;
   height: 3em;
-  background-color: white;
+  background-color: var(--color);
 }
+
 .job-card-icon > img {
   width: 2em;
   height: 2em;
   margin: 0.5em;
+  filter: invert(1);
 }
+
 .job-card-text {
-  position: absolute;
-  bottom: 0;
+    padding: 1em;
+  padding-top: 3em;
   width: 100%;
-  height: 50%;
-  background-image: linear-gradient(to top, var(--color), rgba(0, 0, 0, 0));
+
 }
 
-.button-alt {
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  border: 2px solid white;
-  color: white;
-  padding: 0.5em 1em;
-  border-radius: 0.25em;
-
-  isolation: isolate;
-  position: relative;
-
-  transition: all 0.3s;
-}
-.button-alt:hover {
-  color: var(--color);
-}
-
-.button-alt::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  background-color: white;
-  inset: 0;
-
-  scale: 0 1;
-  transition: all 0.3s;
-}
-.button-alt:hover::after,
-.button-alt:focus::after {
-  scale: 1 1;
-}
