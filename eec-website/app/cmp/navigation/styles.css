@@ -18,3 +18,38 @@
     border-radius: 0.25rem;
     pointer-events: none;
   }
+
+  .button {
+    --color: rgb(23,61,144);
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    border: 3px solid var(--color);
+    color: var(--color);
+    padding: .5em 1em;
+    border-radius: .25em;
+
+    isolation: isolate;
+    position: relative;
+
+    transition: all 0.3s;
+  }
+  .button:hover{
+        color: white;
+  }
+
+    .button::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        background-color: var(--color);
+        inset: 0;
+
+        scale: 0 1;
+        transition: all 0.3s;
+
+    }
+    .button:hover::after,
+    .button:focus::after{
+        scale: 1 1;
+    }
