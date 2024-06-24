@@ -3,7 +3,6 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-<<<<<<< HEAD
     <main className="flex flex-col items-center justify-between min-h-screen p-24">
       <HeroSection />
       <section className="intro-section w-full py-20">
@@ -21,9 +20,6 @@ export default function Home() {
           </p>
         </div>
       </section>
-=======
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
->>>>>>> d8a12c028737eb21b47d4d90373f24cdf34e9d94
     </main>
   );
 }
