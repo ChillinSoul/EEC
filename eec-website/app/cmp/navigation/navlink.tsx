@@ -1,9 +1,9 @@
+import { NavItem } from "./navbar";
 
-
-export default function Navlink(props: {text: string, link: string}) {
+export default function Navlink(props: NavItem) {
     return (
         <li className="nav-item">
-            <a className="nav-link" href={props.link}>{props.text}</a>
+            <a className="hover:underline text-xl" href={props.link}>{props.text}</a>
         </li>
     );
 }
