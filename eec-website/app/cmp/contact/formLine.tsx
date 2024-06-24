@@ -7,11 +7,18 @@ const FormLine: React.FC<{ item: FormItem }> = ({ item }) => {
                 {item.label}
                 
             </label>
-            <input
+            {item.type === 'textarea' ? (
+                <textarea
+                    placeholder={item.placeholder}
+                    name={item.label.toLowerCase().replace(/\s+/g, '_')}
+                />
+            ) : (
+                <input
                     type={item.type}
                     placeholder={item.placeholder}
                     name={item.label.toLowerCase().replace(/\s+/g, '_')}
                 />
+            )}
         </div>
     );
 };
