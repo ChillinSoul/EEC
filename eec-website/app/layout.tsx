@@ -13,6 +13,7 @@ const navItems: NavItem[] = [
   {text: "Home", link: "#"},
   {text: "About", link: "#"},
   {text: "Projects", link: "#"},
+  {text: "test", link: "/testpage"},
 ];
 
 export default function RootLayout({
