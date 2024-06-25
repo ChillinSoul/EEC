@@ -1,8 +1,7 @@
 "use client";
 
-import { use } from "react";
-import { NavItem } from "./navbar";
 import { usePathname } from "next/navigation";
+import { NavItem } from "./navbar";
 
 export default function Navlink(props: NavItem) {
   const pathname = usePathname();
@@ -13,7 +12,9 @@ export default function Navlink(props: NavItem) {
   return (
     <li className="nav-item">
       <a
-        className={`hover:underline text-xl ${isActive ? 'text-[var(--color)]' : ''}`}
+        className={`hover:underline text-xl ${
+          isActive ? "text-[var(--color)]" : ""
+        }`}
         href={props.link}
       >
         {props.text}
