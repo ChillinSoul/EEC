@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto text-center">
         <div className="mb-4">
           <a
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/company/ecam-engineering-consult/"
             target="_blank"
             rel="noopener noreferrer"
             className="mx-2 hover:underline"
@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
             LinkedIn
           </a>
           <a
-            href="https://www.instagram.com"
+            href="https://www.instagram.com/ecam_engineering_consult/"
             target="_blank"
             rel="noopener noreferrer"
             className="mx-2 hover:underline"
@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
             Instagram
           </a>
           <a
-            href="https://www.facebook.com"
+            href="https://www.facebook.com/EcamEngineeringConsult"
             target="_blank"
             rel="noopener noreferrer"
             className="mx-2 hover:underline"

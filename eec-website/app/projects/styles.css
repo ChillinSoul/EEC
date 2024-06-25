@@ -1,11 +1,9 @@
 /* General Styles */
 body {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
-h1,
-h2,
-p {
+h1, h2, p {
   margin-bottom: 1rem;
 }
 
@@ -45,4 +43,32 @@ p {
 
 .hover\:underline:hover {
   text-decoration: underline;
+}
+
+.transition-all {
+  transition: all 0.3s ease-in-out;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.md\:flex-row {
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.md\:flex-row-reverse {
+  @media (min-width: 768px) {
+    flex-direction: row-reverse;
+  }
+}
+
+.max-h-48 {
+  max-height: 12rem;
+}
+
+.max-h-96 {
+  max-height: 24rem;
 }
