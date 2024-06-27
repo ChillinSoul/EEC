@@ -6,6 +6,7 @@ export interface FormItem {
   label: string;
   type: string;
   placeholder: string;
+  required?: boolean;
 }
 
 interface ContactFormProps {
@@ -49,9 +50,11 @@ const ContactForm: React.FC<ContactFormProps> = ({
     <div className="flex flex-col gap-5 m-auto">
       <h2 className="text-2xl text-[var(--color)]">{title}</h2>
       <form onSubmit={onsubmit}>
-        {formItems.map((item, index) => (
-          <FormLine key={index} item={item} />
-        ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {formItems.map((item, index) => (
+            <FormLine key={index} item={item} />
+          ))}
+        </div>
         <button className="button" type="submit">
           Submit
         </button>

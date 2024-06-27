@@ -38,7 +38,11 @@ const Navbar: React.FC<NavbarProps> = ({ navItems }) => {
       }`}
     >
       <div className="flex flex-row border-line w-full justify-between p-5">
-        <img src="/eec-logo.png" alt="eec logo" className="w-10 h-11" />
+        {isTop ? (
+          <img src="/eec-logo-light.png" alt="eec logo" className="w-10 h-11" />
+        ) : (
+          <img src="/eec-logo.png" alt="eec logo" className="w-10 h-11" />
+        )}
         <ul className="flex flex-row gap-10 m-auto">
           {navItems.map((item, index) => (
             <Navlink key={index} text={item.text} link={item.link} />

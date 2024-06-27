@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import "./styles.css";
 
 const About: React.FC = () => {
@@ -22,9 +23,11 @@ const About: React.FC = () => {
         <h2 className="mb-4 text-3xl font-semibold text-gray-800">
           Our Mission
         </h2>
-        <img
+        <Image
           src="/mission.png"
           alt="Our Mission"
+          width={500}
+          height={500}
           className="w-full h-auto mb-4 rounded"
         />
         <p className="text-lg leading-relaxed text-gray-700">
@@ -40,16 +43,22 @@ const About: React.FC = () => {
         <h2 className="mb-4 text-3xl font-semibold text-gray-800">
           What We Do
         </h2>
-        <img
+        <Image
           src="/what-we-do.jpg"
           alt="What We Do"
+          width={500}
+          height={500}
           className="w-full h-auto mb-4 rounded"
         />
         <p className="text-lg leading-relaxed text-gray-700 mb-4">
-          We specialize in projects across various fields including IT,
-          Electronics, Electro-mechanics, Automation, and more. Our team of
-          skilled students works diligently to bring innovative solutions to
-          complex problems.
+          We specialize in projects across various fields including{" "}
+          <strong>IT, Electronics, Electro-mechanics, Automation, </strong> and
+          more. Our team of skilled students works diligently to bring
+          innovative solutions to complex problems.
+          <a href="/projects" className="text-blue-500 hover:underline">
+            Learn more
+          </a>{" "}
+          about our precviously completed projects.
         </p>
       </section>
 
@@ -57,28 +66,32 @@ const About: React.FC = () => {
         <h2 className="mb-4 text-3xl font-semibold text-gray-800">
           How We Work
         </h2>
-        <img
+        {/* <Image
           src="/how-we-work.jpg"
           alt="How We Work"
+          width={500}
+          height={500}
           className="w-full h-auto mb-4 rounded"
-        />
+        /> */}
         <p className="text-lg leading-relaxed text-gray-700 mb-4">
           We have a group of dedicated student members who are part of EEC. When
-          there are no active projects, these students are "On the bench,"
-          participating in various activities such as team buildings, workshops,
-          and internal projects. When a client contacts us with a project, we
-          assess the requirements, form a team, and decide whether to accept the
-          project.
+          there are no active projects, these students are &quot;On the
+          bench,&quot; participating in various activities such as team
+          buildings, workshops, and internal projects. When a client contacts us
+          with a project, we assess the requirements, form a team, and decide
+          whether to accept the project.
         </p>
       </section>
 
       <section className="w-full max-w-4xl p-8 bg-white rounded shadow-md mb-8">
         <h2 className="mb-4 text-3xl font-semibold text-gray-800">Workshops</h2>
-        <img
+        {/* <Image
           src="/workshops.jpg"
           alt="Workshops"
+          width={500}
+          height={500}
           className="w-full h-auto mb-4 rounded"
-        />
+        /> */}
         <p className="text-lg leading-relaxed text-gray-700 mb-4">
           Throughout the year, we organize workshops on various subjects such as
           communication skills, management, and more. These workshops aim to
@@ -89,11 +102,13 @@ const About: React.FC = () => {
 
       <section className="w-full max-w-4xl p-8 bg-white rounded shadow-md mb-8">
         <h2 className="mb-4 text-3xl font-semibold text-gray-800">Join Us</h2>
-        <img
+        {/* <Image
           src="/join-us.jpg"
           alt="Join Us"
+          width={500}
+          height={500}
           className="w-full h-auto mb-4 rounded"
-        />
+        /> */}
         <p className="text-lg leading-relaxed text-gray-700 mb-4">
           Whether you are a student looking to gain practical experience, a
           professional eager to mentor the next generation of engineers, or a
@@ -114,11 +129,13 @@ const About: React.FC = () => {
         <h2 className="mb-4 text-3xl font-semibold text-gray-800">
           Work with Us
         </h2>
-        <img
+        {/* <Image
           src="/work-with-us.jpg"
           alt="Work with Us"
+          width={500}
+          height={500}
           className="w-full h-auto mb-4 rounded"
-        />
+        /> */}
         <p className="text-lg leading-relaxed text-gray-700 mb-4">
           If you are a company seeking innovative solutions or looking to
           collaborate on engineering projects, we would love to work with you.

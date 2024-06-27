@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const AboutSection: React.FC = () => {
   return (
@@ -17,10 +18,12 @@ const AboutSection: React.FC = () => {
           educational experience of our members through practical projects and
           professional networking.
         </p>
-        <img
-          src="/ecam_logo.png"
+        <Image
+          src="/ecam_logo.jpg"
           alt="ECAM Brussels Logo"
-          className="mx-auto my-6 w-32 h-32"
+          width={500}
+          height={500}
+          className="mx-auto my-6 "
         />
       </div>
     </section>

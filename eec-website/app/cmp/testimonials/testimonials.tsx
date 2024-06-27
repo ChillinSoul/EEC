@@ -22,7 +22,7 @@ const Testimonials: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="p-6 bg-white rounded shadow-md">
-              <p className="text-lg italic">"{testimonial.quote}"</p>
+              <p className="text-lg italic">{testimonial.quote}</p>
               <p className="mt-4 text-sm font-semibold">- {testimonial.name}</p>
             </div>
           ))}

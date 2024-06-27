@@ -8,37 +8,179 @@ const formConfigurations: {
   student: {
     title: "Interested Student",
     formItems: [
-      { label: "Name", type: "text", placeholder: "John Doe" },
-      { label: "Email", type: "email", placeholder: "email@mail.com" },
-      { label: "Course", type: "text", placeholder: "Engineering" },
-      { label: "Message", type: "textarea", placeholder: "Your message here" },
+      {
+        label: "First Name",
+        type: "text",
+        placeholder: "e.g., John",
+        required: true,
+      },
+      {
+        label: "Last Name",
+        type: "text",
+        placeholder: "e.g., Doe",
+        required: true,
+      },
+      {
+        label: "Email",
+        type: "email",
+        placeholder: "e.g., john.doe@example.com",
+        required: true,
+      },
+      {
+        label: "University",
+        type: "text",
+        placeholder: "e.g., ECAM Brussels",
+        required: true,
+      },
+      {
+        label: "Study Field",
+        type: "text",
+        placeholder: "e.g., Industrial Engineering",
+        required: true,
+      },
+      {
+        label: "Study Field Details",
+        type: "text",
+        placeholder: "e.g., Electronics, Mechanics",
+      },
+      {
+        label: "Phone",
+        type: "tel",
+        placeholder: "+32",
+        required: true,
+        isPhone: true,
+      },
+      {
+        label: "Message",
+        type: "textarea",
+        placeholder: "Your Message",
+        required: true,
+      },
     ],
   },
   company: {
     title: "Interested Company",
     formItems: [
-      { label: "Name", type: "text", placeholder: "Jane Smith" },
-      { label: "Email", type: "email", placeholder: "email@company.com" },
-      { label: "Industry", type: "text", placeholder: "Tech" },
-      { label: "Message", type: "textarea", placeholder: "Your message here" },
+      {
+        label: "Company Name",
+        type: "text",
+        placeholder: "e.g., Tech Corp",
+        required: true,
+      },
+      {
+        label: "Email",
+        type: "email",
+        placeholder: "e.g., contact@techcorp.com",
+        required: true,
+      },
+      {
+        label: "Phone",
+        type: "tel",
+        placeholder: "e.g., +1 234 567 8901",
+        required: true,
+        isPhone: true,
+      },
+      {
+        label: "Country",
+        type: "select",
+        placeholder: "Select your country",
+        required: true,
+        options: [
+          "Belgium",
+          "United States",
+          "United Kingdom",
+          "France",
+          "Germany",
+          "Other",
+        ],
+      },
+      {
+        label: "Industry",
+        type: "text",
+        placeholder: "e.g., Information Technology",
+      },
+      {
+        label: "Contact Position in Company",
+        type: "text",
+        placeholder: "e.g., Project Manager",
+      },
+      {
+        label: "Message",
+        type: "textarea",
+        placeholder: "Your Message",
+        required: true,
+      },
     ],
   },
   individual: {
     title: "Interested Individual",
     formItems: [
-      { label: "Name", type: "text", placeholder: "Alex Johnson" },
-      { label: "Email", type: "email", placeholder: "email@individual.com" },
-      { label: "Subject", type: "text", placeholder: "Inquiry" },
-      { label: "Message", type: "textarea", placeholder: "Your message here" },
+      {
+        label: "First Name",
+        type: "text",
+        placeholder: "e.g., Alex",
+        required: true,
+      },
+      {
+        label: "Last Name",
+        type: "text",
+        placeholder: "e.g., Johnson",
+        required: true,
+      },
+      {
+        label: "Email",
+        type: "email",
+        placeholder: "e.g., alex.johnson@example.com",
+        required: true,
+      },
+      {
+        label: "Phone",
+        type: "tel",
+        placeholder: "e.g., +44 1234 567890",
+        required: true,
+        isPhone: true,
+      },
+      {
+        label: "Message",
+        type: "textarea",
+        placeholder: "Your Message",
+        required: true,
+      },
     ],
   },
   other: {
     title: "Other Inquiries",
     formItems: [
-      { label: "Name", type: "text", placeholder: "Sam Lee" },
-      { label: "Email", type: "email", placeholder: "email@other.com" },
-      { label: "Reason", type: "text", placeholder: "Reason" },
-      { label: "Message", type: "textarea", placeholder: "Your message here" },
+      {
+        label: "First Name",
+        type: "text",
+        placeholder: "e.g., Sam",
+        required: true,
+      },
+      {
+        label: "Last Name",
+        type: "text",
+        placeholder: "e.g., Lee",
+        required: true,
+      },
+      {
+        label: "Email",
+        type: "email",
+        placeholder: "e.g., sam.lee@example.com",
+        required: true,
+      },
+      {
+        label: "Subject",
+        type: "text",
+        placeholder: "e.g., Collaboration Proposal",
+        required: true,
+      },
+      {
+        label: "Message",
+        type: "textarea",
+        placeholder: "Your Message",
+        required: true,
+      },
     ],
   },
 };
@@ -90,7 +232,11 @@ const ContactPage = () => {
           formType={formType}
         />
       ) : (
-        <p>Please choose a form type.</p>
+        <main className="flex flex-col items-center min-h-screen p-6">
+          <p className=" text-gray-400">
+            Please choose the form type that suits you best.
+          </p>
+        </main>
       )}
     </main>
   );

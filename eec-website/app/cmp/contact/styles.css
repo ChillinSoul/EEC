@@ -12,9 +12,40 @@
 }
 
 .form-line > input,
-.form-line > textarea {
+.form-line > textarea,
+.form-line > select {
   padding: 0.5em;
   border: 1px solid var(--color);
   background-color: transparent;
   border-radius: 0.25em;
+}
+
+.form-line > .flex {
+  display: flex;
+  gap: 0;
+}
+
+.form-line > .flex > select {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border: 1px solid var(--color);
+  background-color: transparent;
+}
+
+.form-line > .flex > input {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border: 1px solid var(--color);
+  background-color: transparent;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

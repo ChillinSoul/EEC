@@ -1,14 +1,17 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import "./styles.css";
 
 const HeroSection: React.FC = () => {
   return (
     <section className="relative w-full text-center hero-section">
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-        <img
+        <Image
           src="/hero_image.webp"
           alt="Hero Image"
+          layout="fill"
+          objectFit="cover"
           className="object-cover w-full h-full"
         />
       </div>

@@ -3,7 +3,6 @@ import AboutSection from "./cmp/about/aboutSection";
 import ProjectsShowcase from "./cmp/project/projectsShowcase";
 import Testimonials from "./cmp/testimonials/testimonials";
 import JoinUs from "./cmp/join/joinUs";
-import ContactSection from "./cmp/contact/contactSection";
 
 export default function Home() {
   return (
@@ -11,9 +10,8 @@ export default function Home() {
       <HeroSection />
       <AboutSection />
       <ProjectsShowcase />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <JoinUs />
-      <ContactSection />
     </main>
   );
 }
