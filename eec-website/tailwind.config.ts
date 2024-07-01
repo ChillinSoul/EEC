@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: 'media',
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./cmp/**/*.{js,ts,jsx,tsx,mdx}",
@@ -15,6 +16,7 @@ const config: Config = {
       },
     },
   },
+  important: true,
   plugins: [],
 };
 export default config;

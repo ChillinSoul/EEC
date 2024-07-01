@@ -13,22 +13,28 @@ const transporter = nodemailer.createTransport({
 });
 
 export async function POST(request: Request) {
-  const { email, message } = await request.json(); // Parse request body
+  const formData = await request.json(); // Parse request body
 
-  if (!email || !message) {
-    return NextResponse.json({ error: "Email and message are required" }, { status: 400 });
+  if (!formData.email) {
+    return NextResponse.json({ error: "Email is required" }, { status: 400 });
+  }
+
+  // Construct the email message dynamically
+  let message = '';
+  for (const [key, value] of Object.entries(formData)) {
+    message += `${key}: ${value}\n`;
   }
 
   const mailToYou = {
-    from: email,
+    from: formData.email,
     to: process.env.EMAIL_USER,
     subject: "New Contact Form Submission",
-    text: `Message from ${email}:\n\n${message}`,
+    text: message,
   };
 
   const mailToUser = {
     from: process.env.EMAIL_USER,
-    to: email,
+    to: formData.email,
     subject: "Thank you for reaching out!",
     text: "Thank you for your message! We'll get back to you soon.",
   };

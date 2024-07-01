@@ -4,12 +4,11 @@ import ProjectCard, { Project } from "./projectCard";
 
 const projects: Project[] = [
   {
-    photo: "/project1.jpg",
-    title: "aSmartWorld",
-    summary:
-      "Researching the integration of app analytics with Google Analytics using Firebase.",
+    photo: "/project3.png",
+    title: "Data Enrichment",
+    summary: "Using AI and web scraping to enrich data in CSV files.",
     details:
-      "The goal of the aSmartWorld project was to explore the possibility of linking the app's analytics, collected via Firebase, to Google Analytics. This involved an in-depth study of both Firebase and Google Analytics documentation to understand the integration process. The project required extensive research and thorough documentation review to ensure a seamless and effective integration.",
+      "The Data Enrichment project involved developing a program that utilizes a Large Language Model (LLM) with function calling to access web scraping APIs from Bright Data. The program took in CSV files with blank columns and attempted to find and fill in the missing information from various websites. This project focused on automating the data enrichment process, reducing manual efforts, and enhancing data accuracy and completeness.",
   },
   {
     photo: "/project2.jpg",
@@ -23,9 +22,11 @@ const projects: Project[] = [
 
 const ProjectsShowcase: React.FC = () => {
   return (
-    <section className="w-full py-20 bg-gray-200">
+    <section className="w-full py-20 bg-gray-200 dark:bg-gray-900">
       <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-semibold mb-6">Our Projects</h2>
+        <h2 className="text-4xl font-semibold mb-6 text-gray-800 dark:text-gray-200">
+          Our Projects
+        </h2>
         <div className="flex flex-col gap-8">
           {projects.map((project, index) => (
             <ProjectCard

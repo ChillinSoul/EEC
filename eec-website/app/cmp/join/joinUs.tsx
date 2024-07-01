@@ -13,7 +13,7 @@ const JoinUs: React.FC = () => {
           you to join us in our mission.
         </p>
         <Link href="/contact">
-          <button className="button">Get in Touch</button>
+          <button className="button button-light">Get in Touch</button>
         </Link>
       </div>
     </section>

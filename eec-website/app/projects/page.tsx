@@ -1,6 +1,5 @@
 import React from "react";
 import ProjectCard, { Project } from "../cmp/project/projectCard";
-import "./styles.css";
 
 const projects: Project[] = [
   {
@@ -57,10 +56,10 @@ const projects: Project[] = [
 
 const Projects: React.FC = () => {
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen p-8 bg-gray-100">
+    <main className="flex flex-col items-center justify-center min-h-screen p-8 bg-gray-100 dark:bg-gray-900">
       <section className="h-20"></section>
-      <section className="w-full max-w-6xl p-8 bg-white rounded shadow-md mb-8">
-        <h1 className="mb-4 text-4xl font-bold text-center text-gray-800">
+      <section className="w-full max-w-6xl p-8 bg-white dark:bg-gray-700 rounded shadow-md mb-8">
+        <h1 className="mb-4 text-4xl font-bold text-center text-gray-800 dark:text-gray-200">
           Our Projects
         </h1>
         <div className="flex flex-col gap-8">
