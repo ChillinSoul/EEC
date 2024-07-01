@@ -74,4 +74,5 @@ const ContactForm: React.FC<ContactFormProps> = ({
     </div>
   );
 };
+
 export default ContactForm;
