@@ -1,7 +1,6 @@
-"use client";
 import { useState } from "react";
 import FormLine from "./formLine";
-import LoadingModal from "./LoadingModal";
+import LoadingModal from "./loadingModal";
 import "./styles.css";
 
 export interface FormItem {
@@ -35,13 +34,16 @@ const ContactForm: React.FC<ContactFormProps> = ({
     setIsLoading(true); // Show loading modal
 
     try {
-      const response = await fetch("/api/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        "https://us-central1-eec-website-b3cee.cloudfunctions.net/sendEmail",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
 
       setIsLoading(false); // Hide loading modal
 
